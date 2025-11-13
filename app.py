@@ -54,7 +54,7 @@
 #         'title': 'Introduction to AI',
 #         'description': 'Fundamentals of Artificial Intelligence and Machine Learning',
 #         'duration': '45 mins',
-#         'icon': '🤖',
+#         'icon': '',
 #         'videos': [
 #             {'id': 1, 'title': 'What is AI?', 'duration': '10:00', 'url': 'https://www.youtube.com/embed/rJ1Qao09CFI'},
 #             {'id': 2, 'title': 'Machine Learning Basics', 'duration': '12:00', 'url': 'https://www.youtube.com/embed/ukzFI9rgwfU'},
@@ -66,7 +66,7 @@
 #         'title': 'AI in Insurance',
 #         'description': 'Applications of AI in the Insurance Industry',
 #         'duration': '50 mins',
-#         'icon': '🏢',
+#         'icon': '',
 #         'videos': [
 #             {'id': 4, 'title': 'AI for Risk Assessment', 'duration': '15:00', 'url': 'https://www.youtube.com/embed/ScMzIvxBSi4'},
 #             {'id': 5, 'title': 'Claims Processing Automation', 'duration': '12:00', 'url': 'https://www.youtube.com/embed/JMUxmLyrhSk'},
@@ -78,7 +78,7 @@
 #         'title': 'AI in Compliance',
 #         'description': 'Leveraging AI for Regulatory Compliance',
 #         'duration': '40 mins',
-#         'icon': '⚖️',
+#         'icon': '',
 #         'videos': [
 #             {'id': 7, 'title': 'AI-Powered Compliance Monitoring', 'duration': '12:00', 'url': 'https://www.youtube.com/embed/FZ4sG3yg1nY'},
 #             {'id': 8, 'title': 'Regulatory Risk Management', 'duration': '15:00', 'url': 'https://www.youtube.com/embed/5qKCG8nbRzg'},
@@ -90,7 +90,7 @@
 #         'title': 'Ethics & Governance',
 #         'description': 'Ethical AI Implementation and Governance',
 #         'duration': '35 mins',
-#         'icon': '🎯',
+#         'icon': '',
 #         'videos': [
 #             {'id': 10, 'title': 'AI Ethics Principles', 'duration': '10:00', 'url': 'https://www.youtube.com/embed/xAoljeRJ3lU'},
 #             {'id': 11, 'title': 'Bias & Fairness', 'duration': '12:00', 'url': 'https://www.youtube.com/embed/NJ0Hj3XwFJQ'},
@@ -102,7 +102,7 @@
 #         'title': 'Future of AI',
 #         'description': 'Emerging Trends and Future Applications',
 #         'duration': '30 mins',
-#         'icon': '🚀',
+#         'icon': '',
 #         'videos': [
 #             {'id': 13, 'title': 'AI Trends 2025', 'duration': '10:00', 'url': 'https://www.youtube.com/embed/EwTZ2xpQwpA'},
 #             {'id': 14, 'title': 'Generative AI Revolution', 'duration': '12:00', 'url': 'https://www.youtube.com/embed/ZK3O402wf1c'},
@@ -113,16 +113,16 @@
 
 # # === Top videos (unchanged) ===
 # TOP_10_VIDEOS = [
-#     {'id': 101, 'title': 'AI in 5 Minutes', 'duration': '5:00', 'thumbnail': '🎬'},
-#     {'id': 102, 'title': 'Machine Learning Explained', 'duration': '8:00', 'thumbnail': '📊'},
-#     {'id': 103, 'title': 'Deep Learning Basics', 'duration': '10:00', 'thumbnail': '🧠'},
-#     {'id': 104, 'title': 'Natural Language Processing', 'duration': '7:00', 'thumbnail': '💬'},
-#     {'id': 105, 'title': 'Computer Vision 101', 'duration': '9:00', 'thumbnail': '👁️'},
-#     {'id': 106, 'title': 'AI vs ML vs DL', 'duration': '6:00', 'thumbnail': '⚡'},
-#     {'id': 107, 'title': 'AI Applications Today', 'duration': '8:00', 'thumbnail': '🌐'},
-#     {'id': 108, 'title': 'AI Ethics & Privacy', 'duration': '7:00', 'thumbnail': '🔒'},
-#     {'id': 109, 'title': 'Chatbots & Virtual Assistants', 'duration': '6:00', 'thumbnail': '🤖'},
-#     {'id': 110, 'title': 'AI Career Guide', 'duration': '10:00', 'thumbnail': '💼'}
+#     {'id': 101, 'title': 'AI in 5 Minutes', 'duration': '5:00', 'thumbnail': ''},
+#     {'id': 102, 'title': 'Machine Learning Explained', 'duration': '8:00', 'thumbnail': ''},
+#     {'id': 103, 'title': 'Deep Learning Basics', 'duration': '10:00', 'thumbnail': ''},
+#     {'id': 104, 'title': 'Natural Language Processing', 'duration': '7:00', 'thumbnail': ''},
+#     {'id': 105, 'title': 'Computer Vision 101', 'duration': '9:00', 'thumbnail': ''},
+#     {'id': 106, 'title': 'AI vs ML vs DL', 'duration': '6:00', 'thumbnail': ''},
+#     {'id': 107, 'title': 'AI Applications Today', 'duration': '8:00', 'thumbnail': ''},
+#     {'id': 108, 'title': 'AI Ethics & Privacy', 'duration': '7:00', 'thumbnail': ''},
+#     {'id': 109, 'title': 'Chatbots & Virtual Assistants', 'duration': '6:00', 'thumbnail': ''},
+#     {'id': 110, 'title': 'AI Career Guide', 'duration': '10:00', 'thumbnail': ''}
 # ]
 
 
@@ -432,7 +432,7 @@ MODULES = [
         'title': 'Introduction to AI',
         'description': 'Fundamentals of Artificial Intelligence and Machine Learning',
         'duration': '45 mins',
-        'icon': '🤖',
+        'icon': '',
         'videos': [
             {'id': 1, 'title': 'What is AI?', 'duration': '10:00', 'url': 'https://www.youtube.com/embed/rJ1Qao09CFI'},
             {'id': 2, 'title': 'Machine Learning Basics', 'duration': '12:00', 'url': 'https://www.youtube.com/embed/ukzFI9rgwfU'},
@@ -444,7 +444,7 @@ MODULES = [
         'title': 'AI in Insurance',
         'description': 'Applications of AI in the Insurance Industry',
         'duration': '50 mins',
-        'icon': '🏢',
+        'icon': '',
         'videos': [
             {'id': 4, 'title': 'AI for Risk Assessment', 'duration': '15:00', 'url': 'https://www.youtube.com/embed/ScMzIvxBSi4'},
             {'id': 5, 'title': 'Claims Processing Automation', 'duration': '12:00', 'url': 'https://www.youtube.com/embed/JMUxmLyrhSk'},
@@ -456,7 +456,7 @@ MODULES = [
         'title': 'AI in Compliance',
         'description': 'Leveraging AI for Regulatory Compliance',
         'duration': '40 mins',
-        'icon': '⚖️',
+        'icon': '',
         'videos': [
             {'id': 7, 'title': 'AI-Powered Compliance Monitoring', 'duration': '12:00', 'url': 'https://www.youtube.com/embed/FZ4sG3yg1nY'},
             {'id': 8, 'title': 'Regulatory Risk Management', 'duration': '15:00', 'url': 'https://www.youtube.com/embed/5qKCG8nbRzg'},
@@ -468,7 +468,7 @@ MODULES = [
         'title': 'Ethics & Governance',
         'description': 'Ethical AI Implementation and Governance',
         'duration': '35 mins',
-        'icon': '🎯',
+        'icon': '',
         'videos': [
             {'id': 10, 'title': 'AI Ethics Principles', 'duration': '10:00', 'url': 'https://www.youtube.com/embed/xAoljeRJ3lU'},
             {'id': 11, 'title': 'Bias & Fairness', 'duration': '12:00', 'url': 'https://www.youtube.com/embed/NJ0Hj3XwFJQ'},
@@ -480,7 +480,7 @@ MODULES = [
         'title': 'Future of AI',
         'description': 'Emerging Trends and Future Applications',
         'duration': '30 mins',
-        'icon': '🚀',
+        'icon': '',
         'videos': [
             {'id': 13, 'title': 'AI Trends 2025', 'duration': '10:00', 'url': 'https://www.youtube.com/embed/EwTZ2xpQwpA'},
             {'id': 14, 'title': 'Generative AI Revolution', 'duration': '12:00', 'url': 'https://www.youtube.com/embed/ZK3O402wf1c'},
@@ -490,19 +490,19 @@ MODULES = [
 ]
 
 TOP_10_VIDEOS = [
-    {'id': 101, 'title': 'AI in 5 Minutes', 'duration': '5:00', 'thumbnail': '🎬'},
-    {'id': 102, 'title': 'Machine Learning Explained', 'duration': '8:00', 'thumbnail': '📊'},
-    {'id': 103, 'title': 'Deep Learning Basics', 'duration': '10:00', 'thumbnail': '🧠'},
-    {'id': 104, 'title': 'Natural Language Processing', 'duration': '7:00', 'thumbnail': '💬'},
-    {'id': 105, 'title': 'Computer Vision 101', 'duration': '9:00', 'thumbnail': '👁️'},
-    {'id': 106, 'title': 'AI vs ML vs DL', 'duration': '6:00', 'thumbnail': '⚡'},
-    {'id': 107, 'title': 'AI Applications Today', 'duration': '8:00', 'thumbnail': '🌐'},
-    {'id': 108, 'title': 'AI Ethics & Privacy', 'duration': '7:00', 'thumbnail': '🔒'},
-    {'id': 109, 'title': 'Chatbots & Virtual Assistants', 'duration': '6:00', 'thumbnail': '🤖'},
-    {'id': 110, 'title': 'AI Career Guide', 'duration': '10:00', 'thumbnail': '💼'}
+    {'id': 101, 'title': 'AI in 5 Minutes', 'duration': '5:00', 'thumbnail': ''},
+    {'id': 102, 'title': 'Machine Learning Explained', 'duration': '8:00', 'thumbnail': ''},
+    {'id': 103, 'title': 'Deep Learning Basics', 'duration': '10:00', 'thumbnail': ''},
+    {'id': 104, 'title': 'Natural Language Processing', 'duration': '7:00', 'thumbnail': ''},
+    {'id': 105, 'title': 'Computer Vision 101', 'duration': '9:00', 'thumbnail': ''},
+    {'id': 106, 'title': 'AI vs ML vs DL', 'duration': '6:00', 'thumbnail': ''},
+    {'id': 107, 'title': 'AI Applications Today', 'duration': '8:00', 'thumbnail': ''},
+    {'id': 108, 'title': 'AI Ethics & Privacy', 'duration': '7:00', 'thumbnail': ''},
+    {'id': 109, 'title': 'Chatbots & Virtual Assistants', 'duration': '6:00', 'thumbnail': ''},
+    {'id': 110, 'title': 'AI Career Guide', 'duration': '10:00', 'thumbnail': ''}
 ]
 
-# ================= Routes =================
+# ==== Routes 
 
 @app.route('/')
 def index():
