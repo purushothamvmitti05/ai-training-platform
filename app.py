@@ -68,9 +68,9 @@
 #         'duration': '50 mins',
 #         'icon': '',
 #         'videos': [
-#             {'id': 4, 'title': 'AI for Risk Assessment', 'duration': '15:00', 'url': 'https://www.youtube.com/embed/ScMzIvxBSi4'},
-#             {'id': 5, 'title': 'Claims Processing Automation', 'duration': '12:00', 'url': 'https://www.youtube.com/embed/JMUxmLyrhSk'},
-#             {'id': 6, 'title': 'Fraud Detection with AI', 'duration': '18:00', 'url': 'https://www.youtube.com/embed/tgbNymZ7vqY'}
+#             {'id': 4, 'title': 'AI for Risk Assessment', 'duration': '15:00', 'url': 'https://youtu.be/0oeD2Wf25wY?si=Te23GoHuwM5l4jr7'},
+#             {'id': 5, 'title': 'Claims Processing Automation', 'duration': '12:00', 'url': 'https://youtu.be/6dyrBRcC5KA?si=hqh4sefYH-D7oUZt'},
+#             {'id': 6, 'title': 'Fraud Detection with AI', 'duration': '18:00', 'url': 'https://youtu.be/Mo7JMC_oDlI?si=nhH4-RBxOoWyYr51'}
 #         ]
 #     },
 #     {
@@ -80,9 +80,9 @@
 #         'duration': '40 mins',
 #         'icon': '',
 #         'videos': [
-#             {'id': 7, 'title': 'AI-Powered Compliance Monitoring', 'duration': '12:00', 'url': 'https://www.youtube.com/embed/FZ4sG3yg1nY'},
-#             {'id': 8, 'title': 'Regulatory Risk Management', 'duration': '15:00', 'url': 'https://www.youtube.com/embed/5qKCG8nbRzg'},
-#             {'id': 9, 'title': 'Document Analysis & Review', 'duration': '13:00', 'url': 'https://www.youtube.com/embed/3Kq1MIfTWCE'}
+#             {'id': 7, 'title': 'AI-Powered Compliance Monitoring', 'duration': '12:00', 'url': 'https://youtu.be/ufhUW468A3E?si=TKvUqL8ZZFSz5MUZ'},
+#             {'id': 8, 'title': 'Regulatory Risk Management', 'duration': '15:00', 'url': 'https://youtu.be/aGDfy1_e7oU?si=sASOn9za20r72Vfv'},
+#             {'id': 9, 'title': 'Document Analysis & Review', 'duration': '13:00', 'url': 'https://youtu.be/xLt4r3-EZwE?si=Oj_20VmSogzwLEEm'}
 #         ]
 #     },
 #     {
@@ -92,9 +92,9 @@
 #         'duration': '35 mins',
 #         'icon': '',
 #         'videos': [
-#             {'id': 10, 'title': 'AI Ethics Principles', 'duration': '10:00', 'url': 'https://www.youtube.com/embed/xAoljeRJ3lU'},
-#             {'id': 11, 'title': 'Bias & Fairness', 'duration': '12:00', 'url': 'https://www.youtube.com/embed/NJ0Hj3XwFJQ'},
-#             {'id': 12, 'title': 'AI Governance Framework', 'duration': '13:00', 'url': 'https://www.youtube.com/embed/Y7X-8h1tW4o'}
+#             {'id': 10, 'title': 'AI Ethics Principles', 'duration': '10:00', 'url': 'https://youtu.be/5CxZbKr4ifI?si=QSg4TebimJfpK7q0'},
+#             {'id': 11, 'title': 'Bias & Fairness', 'duration': '12:00', 'url': 'https://youtu.be/gV0_raKR2UQ?si=rwwrbsnFm53a_CLr'},
+#             {'id': 12, 'title': 'AI Governance Framework', 'duration': '13:00', 'url': 'https://youtu.be/XNeCmFm_9vA?si=L7GHCucvyAWt6R8Y'}
 #         ]
 #     },
 #     {
@@ -104,25 +104,25 @@
 #         'duration': '30 mins',
 #         'icon': '',
 #         'videos': [
-#             {'id': 13, 'title': 'AI Trends 2025', 'duration': '10:00', 'url': 'https://www.youtube.com/embed/EwTZ2xpQwpA'},
-#             {'id': 14, 'title': 'Generative AI Revolution', 'duration': '12:00', 'url': 'https://www.youtube.com/embed/ZK3O402wf1c'},
-#             {'id': 15, 'title': 'AI Career Opportunities', 'duration': '8:00', 'url': 'https://www.youtube.com/embed/_n9ymIzhbV0'}
+#             {'id': 13, 'title': 'AI Trends 2025', 'duration': '10:00', 'url': 'https://youtu.be/5zuF4Ys1eAw?si=6RVAXTfrck7LZ6zp'},
+#             {'id': 14, 'title': 'Generative AI Revolution', 'duration': '12:00', 'url': 'https://youtu.be/EDb37y_MhRw?si=kECsvBA3xgAkmt_m'},
+#             {'id': 15, 'title': 'AI Career Opportunities', 'duration': '8:00', 'url': 'https://youtu.be/aPObz17OyH8?si=CZmMLfBPDT8Bg5fW'}
 #         ]
 #     }
 # ]
 
 # # === Top videos (unchanged) ===
 # TOP_10_VIDEOS = [
-#     {'id': 101, 'title': 'AI in 5 Minutes', 'duration': '5:00', 'thumbnail': ''},
-#     {'id': 102, 'title': 'Machine Learning Explained', 'duration': '8:00', 'thumbnail': ''},
-#     {'id': 103, 'title': 'Deep Learning Basics', 'duration': '10:00', 'thumbnail': ''},
-#     {'id': 104, 'title': 'Natural Language Processing', 'duration': '7:00', 'thumbnail': ''},
-#     {'id': 105, 'title': 'Computer Vision 101', 'duration': '9:00', 'thumbnail': ''},
-#     {'id': 106, 'title': 'AI vs ML vs DL', 'duration': '6:00', 'thumbnail': ''},
-#     {'id': 107, 'title': 'AI Applications Today', 'duration': '8:00', 'thumbnail': ''},
-#     {'id': 108, 'title': 'AI Ethics & Privacy', 'duration': '7:00', 'thumbnail': ''},
-#     {'id': 109, 'title': 'Chatbots & Virtual Assistants', 'duration': '6:00', 'thumbnail': ''},
-#     {'id': 110, 'title': 'AI Career Guide', 'duration': '10:00', 'thumbnail': ''}
+#     {'id': 101, 'title': 'AI in 5 Minutes', 'duration': '5:00', 'thumbnail': '','url':'https://youtu.be/uMzUB89uSxU?si=lXuqu44cXt9LNEEN'},
+#     {'id': 102, 'title': 'Machine Learning Explained', 'duration': '8:00', 'thumbnail': '','url':'https://youtu.be/PeMlggyqz0Y?si=Q2mi4pnXCJoj7y-p'},
+#     {'id': 103, 'title': 'Deep Learning Basics', 'duration': '10:00', 'thumbnail': '','url':'https://youtu.be/6M5VXKLf4D4?si=mDH2TEcy26PJtbbx'},
+#     {'id': 104, 'title': 'Natural Language Processing', 'duration': '7:00', 'thumbnail': '','url':'https://youtu.be/fLvJ8VdHLA0?si=RvIOhGUcd3ly-VBv'},
+#     {'id': 105, 'title': 'Computer Vision 101', 'duration': '9:00', 'thumbnail': '','url':'https://youtu.be/8LmtNXQTyiw?si=Q_rFC_uwapr0n9yN'},
+#     {'id': 106, 'title': 'AI vs ML vs DL', 'duration': '6:00', 'thumbnail': '','url':'https://youtu.be/vNc2z2u_nh0?si=KY8lFUlyknnUW88_'},
+#     {'id': 107, 'title': 'AI Applications Today', 'duration': '8:00', 'thumbnail': '','url':'https://youtu.be/mWRe8w6YjO0?si=5thYXJn2FI1ps-FH'},
+#     {'id': 108, 'title': 'AI Ethics & Privacy', 'duration': '7:00', 'thumbnail': '','url':'https://youtu.be/aGwYtUzMQUk?si=GkNwNlUBEHiGep9Q'},
+#     {'id': 109, 'title': 'Chatbots & Virtual Assistants', 'duration': '6:00', 'thumbnail': '','url':'https://youtu.be/M2C-yFocLu0?si=yMvvNzsc16CK0Xtc'},
+#     {'id': 110, 'title': 'AI Career Guide', 'duration': '10:00', 'thumbnail': '','url':'https://youtu.be/aPObz17OyH8?si=aL4S8_EXj8QYFCzm'}
 # ]
 
 
