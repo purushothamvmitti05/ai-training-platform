@@ -82,7 +82,7 @@ class Database:
         except:
             pass  # User already exists
     
-    # ========== USER OPERATIONS ==========
+    # === USER OPERATIONS =
     
     def create_user(self, username, password, email, full_name=None):
         """Create a new user"""
@@ -210,7 +210,7 @@ class Database:
         
         return result[0] if result else False
     
-    # ========== VIDEO PROGRESS OPERATIONS ==========
+    #= VIDEO PROGRESS OPERATIONS
     
     def get_watched_videos(self, user_id):
         """Get all watched videos for a user"""
@@ -256,7 +256,7 @@ class Database:
         
         return result[0] if result else False
     
-    # ========== CERTIFICATE OPERATIONS ==========
+    # == CERTIFICATE OPERATIONS=
     
     def get_certificate(self, user_id):
         """Get user's certificate"""
@@ -310,8 +310,7 @@ class Database:
         
         return count >= total_modules
     
-    # ========== QUIZ OPERATIONS (BONUS) ==========
-    
+    # =QUIZ OPERATIONS (BONUS) 
     def save_quiz_result(self, user_id, module_id, score, total_questions):
         """Save quiz result"""
         conn = self.get_connection()
@@ -346,8 +345,7 @@ class Database:
         conn.close()
         
         return results
-    
-    # ========== STATISTICS ==========
+# =STATISTICS 
     
     def get_user_statistics(self, user_id):
         """Get comprehensive user statistics"""
@@ -412,8 +410,7 @@ class Database:
             'total_modules_completed': total_modules_completed,
             'total_videos_watched': total_videos_watched
         }
-    
-    # ========== UTILITY FUNCTIONS ==========
+# ===== UTILITY FUNCTIONS ===
     
     def reset_user_progress(self, user_id):
         """Reset all progress for a user"""
@@ -450,11 +447,11 @@ class Database:
 # Initialize database when module is imported
 if __name__ == '__main__':
     db = Database()
-    print("✅ Database initialized successfully!")
-    print("✅ Demo user created: username='demo', password='demo123'")
+    print(" Database initialized successfully!")
+    print(" Demo user created: username='demo', password='demo123'")
     
     # Test database
     stats = db.get_platform_statistics()
-    print(f"\n📊 Platform Statistics:")
+    print(f"\n Platform Statistics:")
     print(f"   Total Users: {stats['total_users']}")
     print(f"   Total Certificates: {stats['total_certificates']}")
