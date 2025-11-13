@@ -10,13 +10,13 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-brand">
-                <span class="logo">🤖</span>
+                <span class="logo"></span>
                 <span>AI Training</span>
             </div>
             <div class="nav-menu">
                 <a href="{{ url_for('dashboard') }}" class="nav-link active">Dashboard</a>
                 <div class="nav-user">
-                    <span>👤 {{ username }}</span>
+                    <span> {{ username }}</span>
                     <a href="{{ url_for('logout') }}" class="btn btn-outline">Logout</a>
                 </div>
             </div>
@@ -26,7 +26,7 @@
     <div class="container">
         <div class="welcome-section">
             <div class="welcome-content">
-                <h1>Welcome back, {{ username }}! 👋</h1>
+                <h1>Welcome back, {{ username }}!</h1>
                 <p>Continue your AI learning journey and become a certified expert</p>
             </div>
             <div class="progress-card">
@@ -60,8 +60,8 @@
                         <h3>{{ module.title }}</h3>
                         <p>{{ module.description }}</p>
                         <div class="module-meta">
-                            <span>⏱️ {{ module.duration }}</span>
-                            <span>🎥 {{ module.videos|length }} videos</span>
+                            <span> {{ module.duration }}</span>
+                            <span> {{ module.videos|length }} videos</span>
                         </div>
                     </div>
                     <div class="module-footer">
@@ -79,7 +79,7 @@
         
         <section class="section">
             <div class="section-header">
-                <h2>🌟 Top 10 AI Basics</h2>
+                <h2> Top 10 AI Basics</h2>
                 <p>Quick introductory videos to boost your knowledge</p>
             </div>
             
@@ -122,7 +122,7 @@
             <h2 id="videoTitle"></h2>
             <div class="video-player">
                 <div class="video-placeholder">
-                    <div class="play-icon">▶️</div>
+                    <div class="play-icon"></div>
                     <p>Video player would load here</p>
                 </div>
             </div>
