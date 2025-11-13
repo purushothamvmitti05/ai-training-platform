@@ -39,7 +39,7 @@
 //     const placeholder = document.querySelector('.video-placeholder');
 //     if (placeholder) {
 //         placeholder.innerHTML = `
-//             <div class="play-icon">▶️</div>
+//             <div class="play-icon"></div>
 //             <p>Playing video...</p>
 //             <div style="width: 80%; background: rgba(255,255,255,0.3); height: 4px; border-radius: 2px; margin: 20px auto;">
 //                 <div style="width: 0%; background: white; height: 100%; animation: progress 3s linear forwards;"></div>
@@ -145,7 +145,7 @@
 
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('🤖 AI Training Platform initialized');
+    console.log(' AI Training Platform initialized');
     initializeApp();
 });
 
@@ -211,7 +211,7 @@ function simulateVideoProgress() {
     const placeholder = document.querySelector('.video-placeholder');
     if (placeholder) {
         placeholder.innerHTML = `
-            <div class="play-icon" style="animation: pulse 2s ease infinite;">▶️</div>
+            <div class="play-icon" style="animation: pulse 2s ease infinite;"></div>
             <p style="font-size: 1.2rem; margin-bottom: 20px;">Playing video...</p>
             <div style="width: 80%; background: rgba(255,255,255,0.3); height: 6px; border-radius: 3px; margin: 20px auto; overflow: hidden;">
                 <div style="width: 0%; background: white; height: 100%; box-shadow: 0 0 10px rgba(255,255,255,0.5); animation: videoProgress 8s ease-in-out forwards;"></div>
@@ -265,7 +265,7 @@ async function markVideoWatched() {
         }
     } catch (error) {
         console.error('Error marking video as watched:', error);
-        showNotification('❌ Failed to update progress', 'error');
+        showNotification(' Failed to update progress', 'error');
         button.classList.remove('loading');
         button.textContent = 'Mark as Watched';
     }
@@ -675,9 +675,9 @@ window.addEventListener('unhandledrejection', function(e) {
 // CONSOLE MESSAGE
 // ====================================
 
-console.log('%c🤖 AI Training Platform', 'color: #6366f1; font-size: 24px; font-weight: bold;');
+console.log('%c AI Training Platform', 'color: #6366f1; font-size: 24px; font-weight: bold;');
 console.log('%cWelcome! The platform is ready.', 'color: #10b981; font-size: 14px;');
-console.log('%c💡 Tip: Check out the modern animations and interactions!', 'color: #8b5cf6; font-size: 12px;');
+console.log('%c Tip: Check out the modern animations and interactions!', 'color: #8b5cf6; font-size: 12px;');
 
 // ====================================
 // EXPORT FUNCTIONS (if using modules)
