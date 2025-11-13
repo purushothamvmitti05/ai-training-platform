@@ -2,24 +2,24 @@
 
 A comprehensive web-based training platform for compliance professionals to learn about Artificial Intelligence.
 
-## 📋 Features
+#Features
 
-- ✅ **User Authentication** - Secure login and registration system
-- 📚 **5 Comprehensive Modules** - Covering AI fundamentals to advanced applications
-- 🎬 **Top 10 AI Basics Videos** - Quick learning resources
-- 📊 **Progress Tracking** - Visual dashboard showing completion status
-- 🎓 **Certificate Generation** - Automatic certificate upon course completion
-- 📱 **Responsive Design** - Works on desktop, tablet, and mobile
-- 🎨 **Modern UI/UX** - Professional and intuitive interface
+-  **User Authentication** - Secure login and registration system
+- **5 Comprehensive Modules** - Covering AI fundamentals to advanced applications
+- **Top 10 AI Basics Videos** - Quick learning resources
+- **Progress Tracking** - Visual dashboard showing completion status
+-  **Certificate Generation** - Automatic certificate upon course completion
+- **Responsive Design** - Works on desktop, tablet, and mobile
+-  **Modern UI/UX** - Professional and intuitive interface
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Backend**: Python Flask
 - **Frontend**: HTML5, CSS3, JavaScript (Vanilla)
 - **Database**: SQLite
 - **Deployment**: Render.com (recommended)
 
-## 📁 Project Structure
+## Project Structure
 ```
 ai-training-platform/
 ├── app.py                 # Main Flask application
@@ -39,7 +39,7 @@ ai-training-platform/
 └── README.md             # This file
 ```
 
-## 🚀 Local Setup (Development)
+## Local Setup (Development)
 
 ### Prerequisites
 - Python 3.8 or higher
@@ -84,7 +84,7 @@ Use demo credentials:
 
 Or register a new account!
 
-## 🌐 Deployment to Render.com (Free Hosting)
+##  Deployment to Render.com (Free Hosting)
 
 ### Step 1: Prepare for Deployment
 
@@ -144,7 +144,7 @@ Wait 5-10 minutes for deployment to complete!
 
 Your app will be live at: `https://ai-training-platform.onrender.com`
 
-## 🎯 Alternative Deployment Options
+##  Alternative Deployment Options
 
 ### Option 1: PythonAnywhere (Free)
 
@@ -210,7 +210,7 @@ modules = [
 
 Then run: `python database.py`
 
-## 🎨 Customization
+##  Customization
 
 ### Change Colors
 Edit `static/css/style.css`:
@@ -227,7 +227,7 @@ Edit the modules list in `database.py` and re-run initialization.
 ### Change Certificate Design
 Edit `templates/certificate.html` and update styling in `style.css`.
 
-## 🔒 Security Notes
+## Security Notes
 
 **IMPORTANT**: Before going to production:
 
@@ -256,7 +256,7 @@ if check_password_hash(user['password'], password):
 
 3. Add HTTPS in production (Render.com does this automatically)
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### Database errors
 ```bash
@@ -278,7 +278,7 @@ pip install -r requirements.txt
 python app.py --port 5001
 ```
 
-## 📊 Database Schema
+##  Database Schema
 
 **Users Table**
 - id (Primary Key)
@@ -309,23 +309,23 @@ python app.py --port 5001
 - issued_at (Timestamp)
 - certificate_number (Unique)
 
-## 🎓 Demo Credentials
+##  Demo Credentials
 
 **Email**: demo@test.com  
 **Password**: demo123
 
-## 📧 Support
+##  Support
 
 For issues or questions:
 1. Check this README
 2. Review error messages in console
 3. Check Flask logs: `python app.py` output
 
-## 📄 License
+##  License
 
 This project is created for educational purposes.
 
-## 🚀 Future Enhancements
+##  Future Enhancements
 
 - [ ] Email notifications on certificate generation
 - [ ] Quiz system for each module
@@ -336,9 +336,9 @@ This project is created for educational purposes.
 
 ---
 
-**Made with ❤️ for Compliance Professionals**
+**Made with  for Compliance Professionals**
 
-Happy Learning! 🎉
+Happy Learning! 
 ```
 
 ---
