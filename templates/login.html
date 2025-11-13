@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Training Platform - Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <div class="login-left">
+            <div class="brand">
+    <img src="images/logo.png" alt="AI Training Platform Logo" class="brand-image">
+    <div class="logo">🤖</div>
+    <h1>AI Training Platform</h1>
+    <p>Master AI for Compliance & Insurance</p>
+</div>
+            <div class="features">
+                <div class="feature">
+                    <span class="feature-icon">📚</span>
+                    <div>
+                        <h3>5 Comprehensive Modules</h3>
+                        <p>From basics to advanced applications</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">🎥</span>
+                    <div>
+                        <h3>Interactive Videos</h3>
+                        <p>Learn at your own pace</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">🏆</span>
+                    <div>
+                        <h3>Get Certified</h3>
+                        <p>Earn your AI certificate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="login-right">
+            <div class="form-container">
+                {% if register %}
+                    <h2>Create Account</h2>
+                    <p class="subtitle">Start your AI learning journey</p>
+                    
+                    <form method="POST" action="{{ url_for('register') }}">
+                        <div class="form-group">
+                            <label>Username</label>
+                            <input type="text" name="username" required placeholder="Choose a username">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" name="email" required placeholder="your.email@company.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" name="password" required placeholder="Create a strong password">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Create Account</button>
+                    </form>
+                    
+                    <p class="form-footer">
+                        Already have an account? <a href="{{ url_for('login') }}">Sign in</a>
+                    </p>
+                {% else %}
+                    <h2>Welcome Back</h2>
+                    <p class="subtitle">Sign in to continue learning</p>
+                    
+                    {% if error %}
+                    <div class="alert alert-error">{{ error }}</div>
+                    {% endif %}
+                    
+                    <form method="POST" action="{{ url_for('login') }}">
+                        <div class="form-group">
+                            <label>Username</label>
+                            <input type="text" name="username" required placeholder="Enter your username">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" name="password" required placeholder="Enter your password">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Sign In</button>
+                    </form>
+                    
+                    <p class="form-footer">
+                        Don't have an account? <a href="{{ url_for('register') }}">Create one</a>
+                    </p>
+                    
+                    <div class="demo-credentials">
+                        <p><strong>Demo Account:</strong></p>
+                        <p>Username: demo | Password: demo123</p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

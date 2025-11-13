@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ module.title }} - AI Training Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="logo">🤖</span>
+                <span>AI Training</span>
+            </div>
+            <div class="nav-menu">
+                <a href="{{ url_for('dashboard') }}" class="nav-link">← Back to Dashboard</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container module-page">
+        <div class="module-header">
+            <div class="module-icon-large">{{ module.icon }}</div>
+            <div>
+                <h1>{{ module.title }}</h1>
+                <p class="module-description">{{ module.description }}</p>
+                <div class="module-stats">
+                    <span>⏱️ {{ module.duration }}</span>
+                    <span>🎥 {{ module.videos|length }} videos</span>
+                    <span>📊 {{ (watched_videos|length / module.videos|length * 100)|int }}% complete</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="module-content-layout">
+            <div class="module-sidebar">
+                <div class="progress-section">
+                    <h3>Your Progress</h3>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: {{ (watched_videos|length / module.videos|length * 100)|int }}%"></div>
+                        </div>
+                        <span class="progress-label">{{ watched_videos|length }} / {{ module.videos|length }} videos</span>
+                    </div>
+                </div>
+                
+                <div class="video-list">
+                    <h3>Module Content</h3>
+                    {% for video in module.videos %}
+                    <div class="video-item {% if video.id in watched_videos %}watched{% endif %}" 
+                         onclick="playVideo({{ video.id }}, '{{ video.title }}', '{{ video.duration }}')">
+                        <div class="video-item-icon">
+                            {% if video.id in watched_videos %}
+                                ✓
+                            {% else %}
+                                ▶️
+                            {% endif %}
+                        </div>
+                        <div class="video-item-info">
+                            <h4>{{ video.title }}</h4>
+                            <span>{{ video.duration }}</span>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                
+                <div class="module-actions">
+                    {% if watched_videos|length == module.videos|length %}
+                    <button class="btn btn-success btn-block" onclick="completeModule()">
+                        Complete Module ✓
+                    </button>
+                    {% else %}
+                    <button class="btn btn-secondary btn-block" disabled>
+                        Watch all videos to complete
+                    </button>
+                    {% endif %}
+                </div>
+            </div>
+            
+            <div class="module-main">
+                <div id="videoPlayer" class="video-player-large">
+                    <div class="video-placeholder">
+                        <div class="play-icon-large">{{ module.icon }}</div>
+                        <h3>Select a video to begin</h3>
+                        <p>Choose from the content list on the left</p>
+                    </div>
+                </div>
+                
+                <div id="videoControls" class="video-controls" style="display: none;">
+                    <div class="video-info-bar">
+                        <h3 id="currentVideoTitle">Video Title</h3>
+                        <span id="currentVideoDuration">0:00</span>
+                    </div>
+                    <button class="btn btn-primary" onclick="markCurrentVideoWatched()">
+                        Mark as Watched ✓
+                    </button>
+                </div>
+                
+                <div class="module-resources">
+                    <h3>📚 Additional Resources</h3>
+                    <div class="resources-grid">
+                        <div class="resource-card">
+                            <span class="resource-icon">📄</span>
+                            <div>
+                                <h4>PowerPoint Presentation</h4>
+                                <p>Download the slides for offline study</p>
+                                <button class="btn btn-sm btn-outline">Download PPT</button>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <span class="resource-icon">📝</span>
+                            <div>
+                                <h4>Study Guide</h4>
+                                <p>Key concepts and takeaways</p>
+                                <button class="btn btn-sm btn-outline">View Guide</button>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <span class="resource-icon">❓</span>
+                            <div>
+                                <h4>Quiz</h4>
+                                <p>Test your knowledge (Coming Soon)</p>
+                                <button class="btn btn-sm btn-outline" disabled>Take Quiz</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const MODULE_ID = {{ module.id }};
+        let currentVideoId = null;
+        
+        function playVideo(videoId, title, duration) {
+            currentVideoId = videoId;
+
+            const videos = {{ module.videos | tojson }};
+            const selected = videos.find(v => v.id === videoId);
+            const player = document.getElementById('videoPlayer');
+
+            if (selected) {
+                player.innerHTML = `
+                    <div class="video-playing">
+                        <iframe width="100%" height="450"
+                            src="${selected.url}"
+                            title="${title}"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                `;
+            }
+
+            document.getElementById('currentVideoTitle').textContent = title;
+            document.getElementById('currentVideoDuration').textContent = duration;
+            document.getElementById('videoControls').style.display = 'block';
+        }
+        
+        async function markCurrentVideoWatched() {
+            if (!currentVideoId) return;
+            
+            try {
+                const response = await fetch('/complete_video', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({video_id: currentVideoId})
+                });
+                
+                const data = await response.json();
+                if (data.success) {
+                    location.reload();
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+        
+        async function completeModule() {
+            try {
+                const response = await fetch('/complete_module', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({module_id: MODULE_ID})
+                });
+                
+                const data = await response.json();
+                if (data.success) {
+                    if (data.all_completed) {
+                        alert('🎉 Congratulations! All modules completed. Certificate ready!');
+                        window.location.href = '/certificate';
+                    } else {
+                        alert('✅ Module completed!');
+                        window.location.href = '/dashboard';
+                    }
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+    </script>
+</body>
+</html>

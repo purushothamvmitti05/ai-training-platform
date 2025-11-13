@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate - AI Training Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="logo">🤖</span>
+                <span>AI Training</span>
+            </div>
+            <div class="nav-menu">
+                <a href="{{ url_for('dashboard') }}" class="nav-link">← Back to Dashboard</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container certificate-page">
+        <div class="celebration">
+            <h1>🎉 Congratulations! 🎉</h1>
+            <p>You've successfully completed the AI Training Program</p>
+        </div>
+        
+        <div class="certificate-container">
+            <div class="certificate" id="certificate">
+                <div class="certificate-border">
+                    <div class="certificate-content">
+                        <div class="certificate-header">
+                            <div class="certificate-logo">🤖</div>
+                            <h1>AI TRAINING PLATFORM</h1>
+                            <p class="certificate-subtitle">Certificate of Completion</p>
+                        </div>
+                        
+                        <div class="certificate-body">
+                            <p class="certificate-text">This is to certify that</p>
+                            <h2 class="certificate-name">{{ username }}</h2>
+                            <p class="certificate-text">has successfully completed the comprehensive training program in</p>
+                            <h3 class="certificate-course">Artificial Intelligence for Compliance & Insurance</h3>
+                            
+                            <div class="certificate-modules">
+                                <div class="cert-module">
+                                    <span class="cert-icon">🤖</span>
+                                    <span>Introduction to AI</span>
+                                </div>
+                                <div class="cert-module">
+                                    <span class="cert-icon">🏢</span>
+                                    <span>AI in Insurance</span>
+                                </div>
+                                <div class="cert-module">
+                                    <span class="cert-icon">⚖️</span>
+                                    <span>AI in Compliance</span>
+                                </div>
+                                <div class="cert-module">
+                                    <span class="cert-icon">🎯</span>
+                                    <span>Ethics & Governance</span>
+                                </div>
+                                <div class="cert-module">
+                                    <span class="cert-icon">🚀</span>
+                                    <span>Future of AI</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="certificate-footer">
+                            <div class="certificate-date">
+                                <p class="cert-label">Issue Date</p>
+                                <p class="cert-value">{{ issued_date[:10] }}</p>
+                            </div>
+                            
+                            <div class="certificate-seal">
+                                <div class="seal">
+                                    <div class="seal-inner">✓</div>
+                                </div>
+                                <p class="seal-text">CERTIFIED</p>
+                            </div>
+                            
+                            <div class="certificate-id">
+                                <p class="cert-label">Certificate ID</p>
+                                <p class="cert-value cert-id-text">{{ certificate_id }}</p>
+                            </div>
+                        </div>
+                        
+                        <div class="certificate-signature">
+                            <div class="signature">
+                                <div class="signature-line"></div>
+                                <p>Program Director</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="certificate-actions">
+            <button class="btn btn-primary btn-lg" onclick="window.print()">
+                🖨️ Print Certificate
+            </button>
+            <button class="btn btn-secondary btn-lg" onclick="alert('Share functionality coming soon!')">
+                🔗 Share Certificate
+            </button>
+        </div>
+    </div>
+</body>
+</html>

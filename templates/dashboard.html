@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - AI Training Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="logo">🤖</span>
+                <span>AI Training</span>
+            </div>
+            <div class="nav-menu">
+                <a href="{{ url_for('dashboard') }}" class="nav-link active">Dashboard</a>
+                <div class="nav-user">
+                    <span>👤 {{ username }}</span>
+                    <a href="{{ url_for('logout') }}" class="btn btn-outline">Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="welcome-section">
+            <div class="welcome-content">
+                <h1>Welcome back, {{ username }}! 👋</h1>
+                <p>Continue your AI learning journey and become a certified expert</p>
+            </div>
+            <div class="progress-card">
+                <div class="progress-circle">
+                    <svg width="120" height="120">
+                        <circle cx="60" cy="60" r="50" fill="none" stroke="#e0e0e0" stroke-width="10"></circle>
+                        <circle cx="60" cy="60" r="50" fill="none" stroke="#6366f1" stroke-width="10" 
+                                stroke-dasharray="314" stroke-dashoffset="{{ 314 - (314 * overall_progress / 100) }}"
+                                transform="rotate(-90 60 60)"></circle>
+                    </svg>
+                    <div class="progress-text">{{ overall_progress }}%</div>
+                </div>
+                <div>
+                    <h3>Overall Progress</h3>
+                    <p>{{ progress.values()|select|list|length }} of {{ modules|length }} modules completed</p>
+                </div>
+            </div>
+        </div>
+        
+        <section class="section">
+            <div class="section-header">
+                <h2>Training Modules</h2>
+                <p>Complete all modules to earn your certificate</p>
+            </div>
+            
+            <div class="modules-grid">
+                {% for module in modules %}
+                <div class="module-card {% if progress[module.id] %}completed{% endif %}">
+                    <div class="module-icon">{{ module.icon }}</div>
+                    <div class="module-content">
+                        <h3>{{ module.title }}</h3>
+                        <p>{{ module.description }}</p>
+                        <div class="module-meta">
+                            <span>⏱️ {{ module.duration }}</span>
+                            <span>🎥 {{ module.videos|length }} videos</span>
+                        </div>
+                    </div>
+                    <div class="module-footer">
+                        {% if progress[module.id] %}
+                            <span class="badge badge-success">✓ Completed</span>
+                            <a href="{{ url_for('module', module_id=module.id) }}" class="btn btn-secondary">Review</a>
+                        {% else %}
+                            <a href="{{ url_for('module', module_id=module.id) }}" class="btn btn-primary">Start Learning</a>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        
+        <section class="section">
+            <div class="section-header">
+                <h2>🌟 Top 10 AI Basics</h2>
+                <p>Quick introductory videos to boost your knowledge</p>
+            </div>
+            
+            <div class="videos-grid">
+                {% for video in top_videos %}
+                <div class="video-card {% if video.id in watched_videos %}watched{% endif %}">
+                    <div class="video-thumbnail">
+                        <div class="video-icon">{{ video.thumbnail }}</div>
+                        <div class="video-duration">{{ video.duration }}</div>
+                        {% if video.id in watched_videos %}
+                        <div class="watched-badge">✓</div>
+                        {% endif %}
+                    </div>
+                    <div class="video-info">
+                        <h4>{{ video.title }}</h4>
+                        <button class="btn btn-sm btn-play" onclick="watchVideo({{ video.id }})">
+                            {% if video.id in watched_videos %}Rewatch{% else %}Watch Now{% endif %}
+                        </button>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        
+        {% if overall_progress == 100 %}
+        <section class="section certificate-cta">
+            <div class="cta-content">
+                <div class="cta-icon">🎉</div>
+                <h2>Congratulations!</h2>
+                <p>You've completed all training modules. Get your certificate now!</p>
+                <a href="{{ url_for('certificate') }}" class="btn btn-success btn-lg">Get Certificate</a>
+            </div>
+        </section>
+        {% endif %}
+    </div>
+    
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="videoTitle"></h2>
+            <div class="video-player">
+                <div class="video-placeholder">
+                    <div class="play-icon">▶️</div>
+                    <p>Video player would load here</p>
+                </div>
+            </div>
+            <button class="btn btn-primary" onclick="markVideoWatched()">Mark as Watched</button>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
